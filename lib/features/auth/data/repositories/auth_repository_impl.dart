@@ -5,11 +5,12 @@ import 'package:blog_app/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
 class AuthRepostoryImpl implements AuthRepository {
-  late final AuthRemoteDataSource remoteDataSource;
+  final AuthRemoteDataSource remoteDataSource;
+
+  AuthRepostoryImpl(this.remoteDataSource);
   @override
   Future<Either<Failure, String>> loginWithEmailPassowrd(
       {required String email, required String password}) {
-    // TODO: implement loginWithEmailPassowrd
     throw UnimplementedError();
   }
 
